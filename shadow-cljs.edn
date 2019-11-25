@@ -1,0 +1,13 @@
+{:deps true
+
+ :builds {:app {:target :browser
+                :devtools {:preloads [repl oops.core]
+                           :repl-pprint true}
+                :output-dir "public/app/js"
+                :asset-path "app/js"
+                :modules {:main {:entries [app.main]}}}
+
+          :test {:target :node-test
+                 :output-to "target/test.js"
+                 :ns-regexp "-test$"
+                 :autorun true}}}

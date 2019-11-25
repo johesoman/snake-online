@@ -1,0 +1,7 @@
+.projectile
+.dir-locals.el
+.cpcache
+.shadow-cljs
+public/app
+.DS_Store
+\\

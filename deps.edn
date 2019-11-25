@@ -1,0 +1,31 @@
+{:paths ["src" "dev" "test"]
+
+ :deps {;; clojure
+        org.clojure/clojure {:mvn/version "1.10.1"}
+
+        ;; tools.cli
+        org.clojure/tools.cli {:mvn/version "0.4.2"}
+
+        ;; bean
+        cljs-bean {:mvn/version "1.5.0"}
+
+        ;; oops
+        binaryage/oops {:mvn/version "0.7.0"}
+
+        ;; cljs-node-io
+        cljs-node-io {:mvn/version "1.1.2"}
+
+        ;; malli
+        metosin/malli {:git/url "https://github.com/metosin/malli.git"
+                       :sha "0eab0906c96f877d777363e204b4bd5e3ae54ba0"}
+
+        ;; promesa
+        funcool/promesa {:mvn/version "4.0.2"}
+
+        ;; shadow-cljs
+        thheller/shadow-cljs {:mvn/version "2.8.67"}}
+
+ :aliases {:release {:main-opts ["-m" "shadow.cljs.devtools.cli" "release"]}
+
+           :lint {:extra-deps {clj-kondo {:mvn/version "RELEASE"}}
+                  :main-opts ["-m" "clj-kondo.main"]}}}
